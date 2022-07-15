@@ -1,13 +1,93 @@
-body {
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+body {
+  font-family: "Roboto", sans-serif;
+  color: #2D2D2D;
+}
+
+header {
+  padding: 40px 20px;
+  max-width: 675px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+header select {
+  border-radius: 10px;
+  padding: 0px 5px;
+}
+
+.song {
+  background: rgb(245, 245, 245);
+  padding: 15px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.2s ease-in;
+  width: 90%;
+  max-width: 635px;
+  margin: 20px auto 20px auto;
+}
+
+.song:hover {
+  transform: scale(1.01)
+}
+
+.modal {
+  position: fixed;
+  z-index: 500;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.384);
+}
+
+.modalContainer {
+  background: #fff;
+  border-radius: 10px;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  max-width: 635px;
+  padding: 50px;
+  display: flex;
+  place-items: center;
+  gap: 10px;
+}
+
+.position {
+  background: linear-gradient(to bottom right, #24F7BC 15%, #24C4FC);
+  color: #fff;
+  padding: 5px 15px;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.closeBtn {
+  position: absolute;
+  top: 25px;
+  right: 20px;
+  background: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }

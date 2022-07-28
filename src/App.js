@@ -60,7 +60,7 @@ function App() {
           openModal(song);
         }}/>
       ))}
-      {showModal && <Modal data={modalData} closeModal={closeModal} showModal={showModal}/>}
+      {showModal && <Modal data={modalData} closeModal={closeModal}/>}
     </div>
   );
 }
